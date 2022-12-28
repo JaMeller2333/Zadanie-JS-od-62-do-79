@@ -1,0 +1,42 @@
+<html>
+
+<body>
+    <div style="color:purple;font-size:40px;">
+        <script language="JavaScript">
+
+            var a_mel = prompt("wczytaj a=", "");
+            var b_mel = prompt("wczytaj b=", "");
+            var spacje = b_mel;
+
+            var a_mel = parseFloat(a_mel);
+            var b_mel = parseFloat(b_mel);
+            a_mel = a_mel - 2;
+
+            for (i = 1; i <= b_mel; i++) {
+                document.write("*");
+            }
+
+            for (i = 1; i <= a_mel; i++) {
+                document.write("<br>")
+                document.write("*");
+
+                for (a = 1; a <= (b_mel - 2); a++) {
+                    document.write("&nbsp&nbsp");
+
+                }
+
+                document.write("*");
+                document.write("<br>")
+            }
+
+            for (i = 1; i <= b_mel; i++) {
+                document.write("*");
+            }
+
+
+
+        </script>
+    </div>
+</body>
+
+</html>

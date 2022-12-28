@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zad 79 Meller</title>
+</head>
+<div style="color:blueviolet;font-size:45px;font-family:Lucida Sans;background-color: aqua;">
+<script language="JavaScript">
+    alert ("UWAGA Wpisuj liczby powoli!")
+        var xmax = parseFloat(prompt("wartość x_max = "));
+        var xmin = parseFloat(prompt("wartość x_min = "));
+        var ymax = parseFloat(prompt("wartość y_max = "));
+        var ymin = parseFloat(prompt("wartość y_min = "));
+
+        var x1 = Math.pow(xmin, 2)
+        var x2 = Math.pow(ymax, 2)
+        var x3 = x1 + x2;
+        var x4 = Math.sqrt(x3, 2)
+
+        var q1 = Math.pow(xmax, 2)
+        var q2 = Math.pow(ymin, 2)
+        var q3 = q1 + q2;
+        var q4 = Math.sqrt(q3, 2)
+
+        var w1 = Math.pow(xmax, 2)
+        var w2 = Math.pow(ymax, 2)
+        var w3 = w1 + w2;
+        var w4 = Math.sqrt(w3, 2)
+
+        var e1 = Math.pow(xmin, 2)
+        var e2 = Math.pow(ymin, 2)
+        var e3 = e1 + e2;
+        var e4 = Math.sqrt(e3, 2)
+
+        document.write("wartosc d dla x ="+ xmin+" oraz y ="+ ymax+" jest rowna= "+ x4.toFixed(2)+"<br>");
+        document.write("wartosc d dla x ="+ xmax+" oraz y ="+ ymin+" jest rowna= "+ q4.toFixed(2)+"<br>");
+        document.write("wartosc d dla x ="+ xmax+" oraz y ="+ ymax+" jest rowna= "+ w4.toFixed(2)+"<br>");
+        document.write("wartosc d dla x ="+ xmin+" oraz y ="+ ymin+" jest rowna= "+ e4.toFixed(2)+"<br>");  
+</script>
+</div>
+<body>
+</body>
+</html>

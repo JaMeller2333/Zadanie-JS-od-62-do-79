@@ -1,0 +1,65 @@
+<html>
+<head>
+    <META HTTP-EQUIV="content-type" CONTENT="text/html; CHARSET=UTF=8">
+</head>
+<body>
+<textarea cols="150" rows="100"> </html>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    
+    <body>
+        <br> <br>
+        Podaj bok a(górna podstawa)=
+        <input size="6" id="a" type="text"><br>
+        Podaj bok b(dolna podstawa)=
+        <input size="6" id="b"><br>
+        Podaj bok h(wysokosc)=
+        <input size="6" id="h">
+        <br> <br>
+        <button id="saveBtn" class="saveBtn">Oblicz</button>
+        <br> <br>
+        <span id="Drabina">Pole= </span>
+        <input size="6" id="pole">
+        <span id="Alfa">Obwód= </span>
+        <input size="6" id="obwod">
+        <script>
+            let button = document.getElementById('saveBtn');
+            button.addEventListener("click", () => {
+                const a_mel = parseInt(document.getElementById('a').value);
+                const b_mel = parseInt(document.getElementById('b').value);
+                const h_mel = parseInt(document.getElementById('h').value);
+                const pole = document.getElementById('pole');
+                const obwod = document.getElementById('obwod');
+
+                function pow_melzota(a, b, h) {
+                    let pole = ((a + b) * h) / 2;
+                    return pole;
+                }
+                function obw_melzota(a, b, h) {
+                    let odc = (a - b) / 2;
+                    let c = Math.hypot(odc, h);
+                    let obw = a + b + (2 * c);
+                    return obw;
+                }
+
+                let pow = pow_melzota(a_mel, b_mel, h_mel);
+                let obw1 = obw_melzota(a_mel, b_mel, h_mel);
+                pole.value = pow.toFixed(2);
+                obwod.value = obw1.toFixed(2);
+
+
+            })
+
+        </script>
+    </body>
+    
+    </html>
+</textarea>
+</body>
+</html>

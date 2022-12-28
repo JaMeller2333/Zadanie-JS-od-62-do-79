@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zad 78 Meller</title>
+</head>
+<body>
+<script>
+        var liczba = parseFloat(prompt("Wczytaj liczbe"))
+        var liczba2 = parseFloat(prompt("Wczytaj druga liczbe"))
+
+        if (liczba == liczba2) { confirm("Liczby są takie same") }
+
+        if (liczba < liczba2) {
+            for (var i = liczba; i <= liczba2; i++) {
+                if (i % 2 != 0) {
+                    document.write("<p style=\"font-size: 20px; color: green;\">" + i + "<br></p>");
+                }
+            }
+        }
+        else if (liczba > liczba2) {
+            for (var i = liczba; i >= liczba2; i--) {
+                if (i % 2 != 0) {
+                    document.write("<p style=\"font-size: 10px; color: blue;\">" + i + "<br></p>");
+                }
+            }
+        }
+ </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+        var l1_t_mel = parseFloat(prompt("Wczytaj pierwszą liczbe z przedziału <20;60>"))
+        var l2_t_mel = parseFloat(prompt("Wczytaj drugą liczbe z przedziału <20;60>"))
+        var tekst_mel = String(prompt("Wczytaj tekst"))
+
+
+        if ((l1_t_mel < 20 || l1_t_mel > 60) || (l2_t_mel < 20 || l2_t_mel > 60)) {
+            document.write("Liczba nie jest z przedziału <20;60>")
+        } else {
+            if (l1_t_mel < l2_t_mel) {
+                var pocz_mel = 5;
+                for (i = 0; i < 19; i++) {
+                    pocz_mel += 5
+                    document.write("<p style=\"font-size:" + pocz_mel + "px; color: black;\"><br>" + tekst_mel + "<br></p>");
+
+                }
+            } else {
+                var pocz_mel2 = 100;
+                for (j = 0; j < 19; j++) {
+                    pocz_mel2 = pocz_mel2 - 5;
+                    document.write("<p style=\"font-size:" + pocz_mel2 + "px; color: black;\"><br>" + tekst_mel + "<br></p>");
+
+                }
+            }
+        }
+</script>
+</body>
+</html>
